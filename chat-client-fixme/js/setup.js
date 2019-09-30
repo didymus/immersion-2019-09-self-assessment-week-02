@@ -101,7 +101,7 @@ const displayData = (data, user) => {
   });
 };
 
-const postData = (message, username) => {
+const postData = (message, username) => { // this is the function responsible for sending msgs
   $.ajax({
     url: SERVER_URL,
     contentType: 'application/json',
@@ -111,7 +111,7 @@ const postData = (message, username) => {
       text: message,
     }),
     success: (data) => {
-      console.log('Success!', data);
+      getData(); //console.log('Success!', data);
     },
     error: (data) => {
       console.log(data);

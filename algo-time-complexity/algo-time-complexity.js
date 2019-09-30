@@ -4,7 +4,7 @@
  */
 
 const TimeComplexity = {
-  FIX_ME: 'wrong answer',
+  // FIX_ME: 'wrong answer',
   CONSTANT: 'constant',
   LOGARITHMIC: 'logarithmic',
   LINEAR: 'linear',
