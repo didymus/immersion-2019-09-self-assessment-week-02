@@ -42,10 +42,24 @@ const makeFlyingHorse = function(name, color) {
 // Do not use the ES6 `class` keyword; use ES5 to create your classes.
 
 const Horse = function(name) {
+  this.name = name;
+  this.goSomewhere = function (destination) {
+    return name + ' is galloping to ' + destination + '!';
+  };
 };
 
 
 const FlyingHorse = function(name, color) {
+  Horse.call(this, name);
+  const oldGoSomewhere = this.goSomewhere;
+  this.color = color;
+  this.goSomewhere = function (destination, milesToDestination) {
+    if (milesToDestination < 10) {
+      return oldGoSomewhere(destination);
+    } else {
+      return name + ' is flying to ' + destination + '!';
+    }
+  };
 };
 
 
