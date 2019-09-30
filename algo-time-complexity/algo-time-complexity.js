@@ -14,7 +14,7 @@ const TimeComplexity = {
 
 
 // TODO: Update this constant and explain your reasoning
-const sortedIndexOfTimeComplexity = TimeComplexity.FIX_ME;
+const sortedIndexOfTimeComplexity = TimeComplexity.LINEAR; // because sorted
 const sortedIndexOf = (array, targetElement) => {
   let minIndex = 0;
   let maxIndex = array.length - 1;
@@ -39,8 +39,8 @@ const sortedIndexOf = (array, targetElement) => {
 
 
 // TODO: Update this constant and explain your reasoning
-const findDuplicatesTimeComplexity = TimeComplexity.FIX_ME;
-const findDuplicates = (string) => {
+const findDuplicatesTimeComplexity = TimeComplexity.QUADRATIC;
+const findDuplicates = (string) => { // as data set gets larger becomes ineffecient
   const tracker = {};
   const result = [];
   for (let i = 0; i < string.length; i++) {
@@ -58,8 +58,8 @@ const findDuplicates = (string) => {
 
 
 // TODO: Update this constant and explain your reasoning
-const bruteForcePasswordTimeComplexity = TimeComplexity.FIX_ME;
-const bruteForcePassword = (max) => {
+const bruteForcePasswordTimeComplexity = TimeComplexity.EXPONENTIAL;
+const bruteForcePassword = (max) => { // becomes exponential with longer pws
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
   const findPassword = (attempt) => {
@@ -91,8 +91,8 @@ const hasDuplicates = (array) => {
 
 
 // TODO: Update this constant and explain your reasoning
-const removeLastThreeElementsTimeComplexity = TimeComplexity.FIX_ME;
-const removeLastThreeElements = (array) => {
+const removeLastThreeElementsTimeComplexity = TimeComplexity.CONSTANT;
+const removeLastThreeElements = (array) => { // because you go right to the end
   let numberOfElementsToRemove = 3;
 
   while (numberOfElementsToRemove-- > 0) {
